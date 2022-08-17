@@ -1,0 +1,30 @@
+/* start of services home */
+.col-services-link {
+    transition: all .25s ease-in-out;
+}
+
+.col-services:hover .col-services-link {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+/* end of services home */
+
+/* start of content bottom */
+@media screen and (min-width:768px) {
+    .content-group-bottom section:nth-child(odd) .row-content {
+        flex-direction: row-reverse;
+    }
+}
+
+/* end of content bottom */
+/* start of partners */
+.col-partners img {
+    transition: all .25s ease-in-out;
+}
+
+.col-partners:hover img {
+    transform: scale(1.15);
+}
+
+/* end of partners */
