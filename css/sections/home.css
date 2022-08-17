@@ -1,3 +1,9 @@
+@media only screen and (max-width:991px) {
+    .hero-content {
+        height: 40vh !important;
+    }
+}
+
 /* start of services home */
 .col-services-link {
     transition: all .25s ease-in-out;
@@ -12,19 +18,28 @@
 
 /* start of content bottom */
 @media screen and (min-width:768px) {
-    .content-group-bottom section:nth-child(odd) .row-content {
+    .content-group-bottom section:nth-child(even) .row-content {
         flex-direction: row-reverse;
     }
 }
 
 /* end of content bottom */
 /* start of partners */
-.col-partners img {
+/* .col-partners img {
     transition: all .25s ease-in-out;
 }
 
 .col-partners:hover img {
     transform: scale(1.15);
-}
+} */
 
 /* end of partners */
+
+/* start of testimonials */
+@media screen and (max-width:767px) {
+    .img-quotes {
+        left: 25px;
+    }
+}
+
+/* end of testimonials */

@@ -2,6 +2,11 @@
 <section class="pt-5">
 <div class="container">
 <div class="row justify-content-center">
+
+<div class="col-12">
+    <?php get_template_part('partials/join-list-banner'); ?>
+</div>
+
 <div class="col-lg-6 col-md-9 col-10 text-center pb-5">
 <a href="<?php echo home_url(); ?>">
 <?php $logo = get_field('logo','options'); $logoFooter = get_field('logo_footer','options'); 
@@ -24,7 +29,6 @@ echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto']);
         <div class="row">
    
 <div class="col-12 text-center text-white">
-<?php echo get_template_part('partials/si'); ?>
 <div class="text-gray-1 pt-4">
 <?php the_field('website_message','options'); ?>
 </div>

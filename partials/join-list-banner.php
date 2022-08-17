@@ -1,7 +1,7 @@
 <?php
 
 
-echo '<section class="pt-5 pb-5 position-relative">';
+echo '<section class="pb-5 position-relative">';
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 echo '<div class="col-md-7 text-center d-flex justify-content-center align-items-center flex-wrap pt-4 pb-4" style="background:#f2f2f2;">';
