@@ -3,22 +3,22 @@
  get_header();
 
  //  start of header
- echo '<section class="bg-attachment position-relative d-flex align-items-end justify-content-center hero-content" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:center;padding-bottom:15px;height:87vh;">';
+ echo '<section class="bg-attachment position-relative d-flex align-items-end justify-content-center hero-content" style="background:url(' . get_the_post_thumbnail_url() . ');background-size:cover;background-attachment:fixed;background-position:top;padding-bottom:15px;height:87vh;">';
  
  echo '<div class="position-absolute w-100 h-100" style="top:0;left:0;background: rgb(255,255,255);
 background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(75,113,255,1) 70%);mix-blend-mode:multiply;"></div>';
  
  echo '<div class="col-12 ml-auto p-0">';
 //  echo '<div class="bg-accent pt-3 pb-3">';
- echo '<h1 class="text-white text-center mb-0 page-title text-uppercase text-shadow">' . get_the_title() . '</h1>';
+ echo '<h1 class="text-white text-center mb-0 page-title text-uppercase text-shadow" style="letter-spacing:0.2em;">' . get_the_title() . '</h1>';
 //  echo '</div>';
  
  if(have_rows('header_content')): while(have_rows('header_content')): the_row();
 //  echo '<div class="pt-3 pb-3 pl-md-5 pl-3 pr-md-5 pr-3" style="background:rgba(255,255,255,.6);">';
  
  echo '<div class="text-center" style="">';
- echo '<h2 class="subtitle text-white">' . get_sub_field('subtitle') . '</h2>';
- echo '<div class="text-accent-secondary" style="font-size:120%;">';
+ echo '<h2 class="subtitle text-white" style="font-size:19px;">' . get_sub_field('subtitle') . '</h2>';
+ echo '<div class="text-white" style="font-size:120%;">';
  echo get_sub_field('content');
  echo '</div>';
  
@@ -57,7 +57,7 @@ background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(75,113,255,1) 7
  
      echo '<div class="container">';
      echo '<div class="row row-content align-items-center justify-content-between">';
-     echo '<div class="col-md-4" data-aos="' . $contentDataAos . '">';
+     echo '<div class="col-md-6" data-aos="' . $contentDataAos . '">';
          echo $content;
      echo '</div>';
  
@@ -97,14 +97,14 @@ $bgImg = get_sub_field('background_image');
 $content = get_sub_field('content');
 $relationship = get_sub_field('relationship');
 
-echo '<section class="pt-5 pb-5 position-relative bg-attachment" style="">';
+echo '<section class="position-relative bg-attachment" style="padding-top:75px;padding-bottom:175px;">';
 
 echo wp_get_attachment_image($bgImg['id'],'full','',['class'=>'position-absolute w-100 h-100','style'=>'top:0;left:0;']);
 
-echo '<div class="position-absolute w-100 h-100 bg-accent" style="mix-blend-mode:multiply;top:0;"></div>';
+// echo '<div class="position-absolute w-100 h-100 bg-accent" style="mix-blend-mode:multiply;top:0;"></div>';
 
 echo '<div class="position-relative pt-5 pb-5">';
-echo '<div class="position-absolute w-100 h-100" style="mix-blend-mode:screen;opacity:.62;top:0;left:0;pointer-events:none;background:#0f2849;"></div>';
+// echo '<div class="position-absolute w-100 h-100" style="mix-blend-mode:screen;opacity:.62;top:0;left:0;pointer-events:none;background:#0f2849;"></div>';
 echo '<div class="container">';
 echo '<div class="row justify-content-center">';
 echo '<div class="col-lg-10 text-center text-white pb-5">';
@@ -122,17 +122,17 @@ foreach( $relationship as $post ):
 // Setup this post for WP functions (variable must be named $post).
 setup_postdata($post);
 $counter++;
-echo '<div class="col-md-4 text-white mb-4">';
-echo '<div class="position-relative pr-4 pl-4 h-100 d-flex align-items-end col-services" style="">';
+echo '<div class="col-md-4 text-white mb-5">';
+echo '<div class="position-relative pt-2 pr-4 pl-4 h-100 d-flex align-items-end col-services" style="border:1px solid var(--accent-quinary);">';
 
 echo '<div class="position-absolute w-100 h-100 bg-accent" style="top:0;left:0;mix-blend-mode:overlay;opacity:.65;"></div>';
 
-echo '<a href="' . get_the_permalink() . '" class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center z-2 col-services-link" style="top:0;left:0;border:4px solid var(--accent-quaternary);opacity:0;pointer-events:none;text-decoration:none;background:var(--accent-tertiary);">';
+echo '<a href="' . get_the_permalink() . '" class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center text-center z-2 col-services-link" style="top:0;left:0;border:4px solid var(--accent-quaternary);opacity:0;pointer-events:none;text-decoration:none;background:var(--accent-tertiary);">';
 echo '<h3 class="mb-0 bold h4" style="">' . get_the_title() . '</h3>';
 echo '</a>';
 
 echo '<div class="w-100" style="">';
-echo '<span class="h1 pb-5 d-inline-block">' . str_pad($counter, 2, '0', STR_PAD_LEFT) . '</span>';
+echo '<span class="h1 pb-5 d-inline-block blair-light">' . str_pad($counter, 2, '0', STR_PAD_LEFT) . '</span>';
 
 // echo '<h3 class="mb-0 pb-4 h4" style="border-bottom:10px solid var(--accent-quinary);"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
 
@@ -186,11 +186,19 @@ if(have_rows('content_group_bottom')):
     $contentDataAos = get_sub_field('content_data_aos');
     $content = get_sub_field('content');
 
-    echo '<section class="position-relative bg-attachment mt-5 mb-5 ' . $classes . '" style="background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;background-attachment:fixed;padding:250px 0;' . $style . '">';
+    if($bgImg){
+
+        echo '<section class="position-relative bg-attachment mt-5 mb-5 ' . $classes . '" style="background:url(' . wp_get_attachment_image_url($bgImg['id'],'full') . ');background-size:cover;background-attachment:fixed;padding:250px 0;background-repeat:no-repeat;' . $style . '">';
+        // echo '</section>';
+    } else {
+        echo '<section class="position-relative mt-5 mb-5 ' . $classes . '" style="padding:250px 0;' . $style . '">';
+    }
+
+    echo '<div class="position-absolute w-100 h-100 overlay" style="top:0;left:0;"></div>';
 
     echo '<div class="container">';
     echo '<div class="row row-content align-items-center justify-content-between">';
-    echo '<div class="col-md-4" data-aos="' . $contentDataAos . '">';
+    echo '<div class="col-md-5" data-aos="' . $contentDataAos . '">';
         echo $content;
     echo '</div>';
 

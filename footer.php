@@ -2,7 +2,7 @@
 <section class="pt-5">
 <div class="container">
 <div class="row justify-content-center">
-<div class="col-lg-3 col-6 text-center pb-5">
+<div class="col-lg-6 col-md-9 col-10 text-center pb-5">
 <a href="<?php echo home_url(); ?>">
 <?php $logo = get_field('logo','options'); $logoFooter = get_field('logo_footer','options'); 
 if($logoFooter){

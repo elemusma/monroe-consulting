@@ -75,13 +75,19 @@ blockquote {
 
 h2,
 h3 {
-  font-family: 'blairitc_ttlight';
   color: #353535;
 }
 
 h1,
-h2.subtitle.text-white {
-  /* font-family: magallanes, sans-serif;
-  font-weight: 900; */
-  font-family: 'nexa_heavyregular';
+h2,
+h3 {
+  font-family: futura-pt, sans-serif;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+.blair-light {
+  font-family: 'blairitc_ttlight';
 }

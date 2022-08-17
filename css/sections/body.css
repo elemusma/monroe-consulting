@@ -1,8 +1,9 @@
 :root {
   --accent-primary: #182236;
-  --accent-secondary: #c4a95e;
+  --accent-secondary: #fcb040;
   --accent-tertiary: #3373f1;
   --accent-quaternary: #6dcff6;
+  --accent-quinary: #273e95;
 }
 
 html {

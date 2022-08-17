@@ -71,10 +71,10 @@ $logo = get_field('logo','options');
 if($logo){
 echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:250px;']);
 }
-?>
-</a>
-</div>
-<?php 
+
+echo '</a>';
+echo '</div>';
+
 wp_nav_menu(array(
 'menu' => 'primary',
 'menu_class'=>'menu d-flex flex-wrap list-unstyled justify-content-center mb-0'
@@ -84,17 +84,17 @@ echo '<div class="small text-center pt-4">';
 the_field('website_message','options');
 echo '</div>';
 
-?>
 
 
 
-</div>
-</div>
-</div>
-</div>
 
-</header>
-<?php
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+
+echo '</header>';
+
 if(!is_front_page()){
 echo '<section class="hero position-relative">';
 $globalPlaceholderImg = get_field('global_placeholder_image','options');
@@ -118,7 +118,7 @@ echo '<div class="position-relative">';
 echo '<div class="container">';
 echo '<div class="row">';
 echo '<div class="col-12">';
-echo '<h1 class="pt-3 pb-3 mb-0 text-shadow">' . get_the_title() . '</h1>';
+echo '<h1 class="pt-3 pb-3 mb-0 text-shadow" style="letter-spacing:0.2em;">' . get_the_title() . '</h1>';
 echo '</div>';
 echo '</div>';
 echo '</div>';
