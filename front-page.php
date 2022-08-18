@@ -131,12 +131,12 @@ echo '<a href="' . get_the_permalink() . '" class="position-absolute w-100 h-100
 echo '<h3 class="mb-0 bold h4" style="">' . get_the_title() . '</h3>';
 echo '</a>';
 
-echo '<div class="w-100" style="">';
+echo '<div class="w-100 position-relative" style="height:250px;">';
 echo '<span class="h1 pb-5 d-inline-block blair-light">' . str_pad($counter, 2, '0', STR_PAD_LEFT) . '</span>';
 
 // echo '<h3 class="mb-0 pb-4 h4" style="border-bottom:10px solid var(--accent-quinary);"><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></h3>';
 
-echo '<div class="container">';
+echo '<div class="container position-absolute" style="bottom:0;">';
 
 echo '<div class="row align-items-baseline">';
 echo '<div class="col-md-2 pb-lg-0 pl-0 pb-3 text-white">';
@@ -200,11 +200,11 @@ if(have_rows('content_group_bottom')):
     echo '<div class="row row-content align-items-center justify-content-between">';
   
 
-    if($img):
     echo '<div class="col-lg-6 pb-lg-0 pb-4" data-aos="' . $imgDataAos . '">';
+    if($img):
         echo wp_get_attachment_image($img['id'],'full','',['class'=>'w-100 h-100','style'=>'object-fit:cover;']);
-    echo '</div>';
     endif;
+    echo '</div>';
 
     echo '<div class="col-lg-5" data-aos="' . $contentDataAos . '">';
     echo $content;
