@@ -1,0 +1,33 @@
+input.gform_button.button {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  border-radius: 25px;
+  padding: 10px 35px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  max-width: 250px;
+  width: 100%;
+  margin: auto;
+  cursor: pointer;
+  color: white;
+  box-shadow: none !important;
+}
+
+input.gform_button.button:hover {
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-secondary);
+}
+
+.gform_footer.top_label {
+  margin-bottom: -90px !important;
+}
+
+input,
+textarea {
+  box-shadow: inset 1px 1px 8px #eaeaea !important;
+  border: none;
+}
+
+input[type=file] {
+  box-shadow: none !important;
+}
